@@ -1,0 +1,57 @@
+---
+title: "Control de Versiones con Git y GitHub"
+author: "Antonio J. Pérez-Luque"
+format:
+  revealjs: 
+    theme: custom_theme.scss
+    transition: fade
+---
+
+![[phdcomic](http://phdcomics.com/)](images/final_doc.png)
+
+--- 
+
+![[phdcomic](http://phdcomics.com/)](images/astorytold.png)
+
+## ¿Qué es el control de versiones? 
+
+El **control de versiones** es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que podamos recuperar versiones específicas más adelante
+
+- Se puede utilizar sobre cualquier archivo. 
+- Permite: 
+  - Revertir archivos (proyecto) a un estado anterior
+  - Comparar cambios a lo largo del tiempo
+- Facilita la identificación de errores 
+
+## Registro de cambios 
+
+![](images/carp-changes.svg)
+
+## Registro de cambios (varios usuarios) {.small}
+
+![](images/carp-two-users.svg){fig-align="center"}
+
+## Integración de cambios 
+![](images/carp-merge.svg){fig-align="center"}
+
+## Sistemas para el control de versiones
+<p align="center"><img src="images/git_logo.png" height="251" width="600"></p>
+<br>
+
+- [ProGit book](http://git-scm.com/book/en/v2) 
+- Otros:
+  - [Subversion](https://subversion.apache.org/)
+  - Concurrent Version System [CVS](https://www.nongnu.org/cvs/)
+
+## Git
+
+- Sistema avanzado de control de versiones distribuido
+- Permite **rastrear** el progreso de un proyecto mediante **capturas**
+  - **¿Qué cambios?**
+  - **¿Dónde?**
+  - **¿Quién los hizo?**
+  - **¿Por qué?**
+
+---
+![[Devon Wijesinghe](https://wdevon99.medium.com/git-under-the-hood-26b46a47393c)](images/git-distributed.png)
+
