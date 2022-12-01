@@ -1,6 +1,8 @@
 ---
 title: "Control de Versiones con Git y GitHub"
-author: "Antonio J. Pérez-Luque"
+author: "**Antonio J. Pérez-Luque**"
+subtitle: "<span style='font-size:0.75em'> Ciclo de Gestión del Dato: Ecoinformática <br> Máster Universitario en Conservación, Gestión y Restauración de la Biodiversidad</span>" 
+date: "<span style='font-size:0.75em'>Curso 2022-2023</span>" 
 format:
   revealjs: 
     theme: custom_theme.scss
@@ -13,7 +15,7 @@ execute:
 
 ![[phdcomic](http://phdcomics.com/)](images/final_doc.png)
 
---- 
+---
 
 ![[phdcomic](http://phdcomics.com/)](images/astorytold.png)
 
@@ -230,7 +232,7 @@ git commit -m "Escribo mis datos personales en archivo"
 - Queremos enviar los cambios a un __repositorio remoto__
 
 ::: callout-caution
-Necesitamos un repositorio remoto: 
+Necesitamos un repositorio remoto (GitHub): 
 
 - Crear 
 - Clonar 
@@ -240,23 +242,150 @@ Necesitamos un repositorio remoto:
 ```bash
 git remote add origin <url server>
 
-git remote add origin https://github.com/ajpelu/ecoinformatica_2014_2015_ajpelu.git
+git remote add origin https://github.com/ajpelu/teach_git_ejemplo.git
 ```
 
-## 
+## Crear repositorio en GitHub 
+![](images/crea_repo.gif)
 
+## Enlazar repositorio local y remoto
+<br>
+URL: <br>
+__https://github.com/ajpelu/teach_git_ejemplo.git__
 
+<br>
+```bash
+git remote add origin <url server>
+git remote add origin https://github.com/ajpelu/teach_git_ejemplo.git
+```
 
-
-
-
-
-
-
+## Enviar 
+::: small
 - Para enviar cambios (una vez conectados) a un repositorio remoto 
+- Nos pedirá usuario y contraseña
+::: 
 
-```
+```bash
 git push origin master
 ```
+::: callout-warning
+```bash
+git push origin
+```
 
-- Nos pedirá usuario y contraseña.
+```bash
+git push origin master
+```
+[¿Qué rama queremos sincronizar?](https://www.geeksforgeeks.org/difference-between-git-push-origin-and-git-push-origin-master/)
+:::
+
+![](images/git-push.png){fig-align="center"}
+
+## Clonar un repositorio
+
+![](images/clon_repo.gif)
+
+## Clonar un repositorio
+
+- Importante para reproducibilidad
+- Colaboración 
+- Repositorio remoto (`GitHub`)
+- 2 formas ([diferencias](https://www.howtogeek.com/devops/should-you-use-https-or-ssh-for-git/))
+
+::: {.panel-tabset}
+## HTTPS
+```bash
+# git clone <url> 
+git clone https://github.com/ajpelu/teach_git_ejemplo.git 
+```
+## SSH
+```bash
+# git clone username@host:/path/to/repository
+git clone git@github.com:ajpelu/teach_git_ejemplo.git 
+```
+::: 
+## Actualizar un repositorio local 
+
+![[Allison_horst](https://github.com/allisonhorst)](images/git-fetch.png)
+
+## Actualizar un repositorio local 
+::: small
+¿Existe alguna información nueva en mi repositorio remoto? 
+::: 
+```bash 
+git fetch  
+```
+
+::: small
+¿Existe alguna información nueva en mi repositorio remoto y quiero que esté en mi repositorio local?
+::: 
+
+```bash 
+git pull  
+```
+::: callout-warning
+- Prestar atención a la rama!! 
+```bash
+git pull origin master 
+```
+::: 
+
+## Otros comandos 
+![](images/cheat-git.png){fig-align="center"}
+
+# Práctica 2.1. <br>Control de Versiones 
+
+## Pasos
+::: small
+1. Instalar Git en tu ordenador
+2. Crear un repositorio llamado `ecoinf_nombre` 
+```bash
+ecoinf_antonioperez
+```
+3. Escribe un documento de texto 
+4. Realiza varios cambios en el documento
+5. Haz un control de versiones
+6. Crea un repositorio en GitHub 
+7. Conecta ambos repositorios y sincronizalos 
+:::
+
+__Entrega: url del repositorio creado__
+
+# Práctica 2.2. <br>Documento Reproducible + Control de versiones
+
+## Pasos
+::: small
+1. Crea un documento reproducible con `.Rmd` y exportalo en el formato que mas te guste (pdf, word, etc.)
+2. Realiza cambios en el documento: 
+
+ - Personaliza con el encabezado YAML 
+ - Incluye texto
+ - Modifica el código 
+
+3. Registra los cambios en el documento mediante el control de versiones
+4. Usa el repositorio de la práctica anterior 
+:::
+
+__Entrega: url del repositorio creado__
+
+# Práctica 2.3. <br>Control de Versiones (Colaboración)
+
+## Pasos
+::: small
+1. Crea un **fork** del repositorio [https://github.com/ajpelu/teach_git_ejemplo](https://github.com/ajpelu/teach_git_ejemplo)
+2. **Clona** el repositorio en tu equipo para tener una copia local 
+3. Escribe algo en el documento `miarchivo.txt` (además de tu nombre y tus apellidos, algo original: un poema, una canción, un refrán, un mensaje, ... )
+4. Registra los cambios y haz un control de versiones 
+5. Sincroniza con tu repositorio remoto
+6. Haz un **pull request**
+:::
+
+::: small
+::: callout-tip
+Si tienes alguna duda consulta puedes leer este [tutorial](https://sigdeletras.com/2021/como-colaborar-en-proyectos-haciendo-pull-requests/)
+::: 
+::: 
+
+::: small
+__Entrega: no es necesario, me llegarán los pull requests de cada uno__
+::: 
