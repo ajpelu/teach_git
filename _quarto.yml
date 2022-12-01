@@ -1,5 +1,26 @@
 project:
-  title: "teach_git"
+  type: website
+  output-dir: docs
 
+website:
+  title: "Introducción al control de Versiones con Git y Github"
+  sidebar:
+    sytle: "docked"
+    pinned: true
+    alignment: center
+    tools:
+      - icon: github
+        href: https://github.com/ajpelu/teach_git
+        text: GitHub
+    contents: 
+      - href: index.qmd
+        text: Control de Versiones 
 
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
 

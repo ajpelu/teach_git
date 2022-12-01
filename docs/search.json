@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "index.html#qué-es-el-control-de-versiones",
+    "href": "index.html#qué-es-el-control-de-versiones",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "¿Qué es el control de versiones?",
+    "text": "¿Qué es el control de versiones?\nEl control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que podamos recuperar versiones específicas más adelante\n\nSe puede utilizar sobre cualquier archivo.\nPermite:\n\nRevertir archivos (proyecto) a un estado anterior\nComparar cambios a lo largo del tiempo\n\nFacilita la identificación de errores"
+  },
+  {
+    "objectID": "index.html#registro-de-cambios",
+    "href": "index.html#registro-de-cambios",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Registro de cambios",
+    "text": "Registro de cambios"
+  },
+  {
+    "objectID": "index.html#registro-de-cambios-varios-usuarios",
+    "href": "index.html#registro-de-cambios-varios-usuarios",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Registro de cambios (varios usuarios)",
+    "text": "Registro de cambios (varios usuarios)"
+  },
+  {
+    "objectID": "index.html#integración-de-cambios",
+    "href": "index.html#integración-de-cambios",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Integración de cambios",
+    "text": "Integración de cambios"
+  },
+  {
+    "objectID": "index.html#sistemas-para-el-control-de-versiones",
+    "href": "index.html#sistemas-para-el-control-de-versiones",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Sistemas para el control de versiones",
+    "text": "Sistemas para el control de versiones\n\n\n\n\n\nProGit book\nOtros:\n\nSubversion\nConcurrent Version System CVS"
+  },
+  {
+    "objectID": "index.html#git",
+    "href": "index.html#git",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Git",
+    "text": "Git\n\nSistema avanzado de control de versiones distribuido\nPermite rastrear el progreso de un proyecto mediante capturas\n\n¿Qué cambios?\n¿Dónde?\n¿Quién los hizo?\n¿Por qué?"
+  },
+  {
+    "objectID": "index.html#github",
+    "href": "index.html#github",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "GitHub",
+    "text": "GitHub\n\n\n\n\nUn website donde alojar repositorios\nInterfaz para explorar repositorios\nPermite colaborar de una forma más eficaz:\n\nCompartir repositorio\nVer cambios\nCorregir errores\nDiscutir y Revisar cambios\n\n\n\n\n\n\n\nhttps://github.com/"
+  },
+  {
+    "objectID": "index.html#recursos-sobre-git",
+    "href": "index.html#recursos-sobre-git",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Recursos sobre Git",
+    "text": "Recursos sobre Git\n\n\nInteractive Tutorial Git (CodeSchool)\nGit - the simple guide (Roger Dudler)\nGit and GitHub (Hadley Wickham)\nA brief introduction to git & GitHub (Karl Broman & Samuel G. Younkin)\nA basic tutorial to version control using git (Jon Lefcheck)\nGit/Github guide a minimal tutorial (Karl Broman)\nGetting Git Right (Atlassian)\nRecopilación de tutoriales (F. Rodríguez-Sánchez)"
+  },
+  {
+    "objectID": "index.html#ciclo-de-git",
+    "href": "index.html#ciclo-de-git",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Ciclo de Git",
+    "text": "Ciclo de Git\n\nArtwork by Allison_horst"
+  },
+  {
+    "objectID": "index.html#ciclo-de-git-1",
+    "href": "index.html#ciclo-de-git-1",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Ciclo de Git",
+    "text": "Ciclo de Git\n\nT. Meralus"
+  },
+  {
+    "objectID": "index.html#instalar-git",
+    "href": "index.html#instalar-git",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Instalar Git",
+    "text": "Instalar Git\n\n\nInstala Git en tu ordenador. Puedes usar la documentación oficial\n\n\nConfigurar Git\n\nCódigoEjemplo\n\n\ngit config --global user.name \ngit config --global user.email \n\n\ngit config --global \"Fulanito Menganito\"\ngit config --global \"micorreo@gmail.com\"\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nVamos a usar Github, por tanto la dirección de correo que indiques ha de ser la misma con la que te registres en GitHub.\n\n\n\n\nEn cualquier momento podemos ver las opciones de configuración\n\ngit config --list"
+  },
+  {
+    "objectID": "index.html#crear-un-repositorio-nuevo",
+    "href": "index.html#crear-un-repositorio-nuevo",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Crear un repositorio nuevo",
+    "text": "Crear un repositorio nuevo\n\nAbre la consola de comandos\nCrea un directorio nuevo y ábrelo1\n\nmkdir <nombre_directorio>\n\nmkdir datos\ncd datos\nAyuda sobre comandos"
+  },
+  {
+    "objectID": "index.html#iniciar-un-repositorio",
+    "href": "index.html#iniciar-un-repositorio",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Iniciar un repositorio",
+    "text": "Iniciar un repositorio\n\nPara iniciar un repositorio utilizamos el comando\n\ngit init nombrerepositorio\n\ngit init mi_primer_repositorio\n\n\n\n\n\n\nNote\n\n\n¿Que ha ocurrido en nuestro directorio?\n\n\n\n\nInspeccionar el directorio\n\ncd mi_primer_repositorio\nls -a \ncd .git"
+  },
+  {
+    "objectID": "index.html#añadir-cambios",
+    "href": "index.html#añadir-cambios",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Añadir cambios",
+    "text": "Añadir cambios\n\nCrea un archivo de texto dentro del directorio, escribe algo y nómbralo miarchivo.txt\nAñade el archivo a la staging area\n\ngit add <nombre_archivo>\ngit add miarchivo.txt\n\nSi quiero añadir todos los archivos\n\ngit add ."
+  },
+  {
+    "objectID": "index.html#registrar-cambios",
+    "href": "index.html#registrar-cambios",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Registrar cambios",
+    "text": "Registrar cambios\ngit commit -m \"Commit message\"\"\n\n\n\n\n\n\nImportant\n\n\nEl mensaje nos servirá para indicar lo que hemos hecho.\n\nRecomendaciones de buenas prácticas para commits\nAlgunas convenciones para commits\n\n\n\n\ngit commit -m \"Escribo mis datos personales en archivo\"\n\n[master (root-commit) 71fe224] Escribo mis datos personales en archivo\n 1 file changed, 2 insertions(+)\n create mode 100644 miarchivo.txt"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "",
+    "text": "T. Meralus"
+  },
+  {
+    "objectID": "index.html#enviar-cambios-a-repositorios-remotos",
+    "href": "index.html#enviar-cambios-a-repositorios-remotos",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Enviar cambios a Repositorios Remotos",
+    "text": "Enviar cambios a Repositorios Remotos\n\nNuestros cambios están en el HEAD (copia local)\nQueremos enviar los cambios a un repositorio remoto\n\n\n\n\n\n\n\nDanger\n\n\nNecesitamos un repositorio remoto (GitHub):\n\nCrear\nClonar\n\n\n\n\ngit remote add origin <url server>\n\ngit remote add origin https://github.com/ajpelu/teach_git_ejemplo.git"
+  },
+  {
+    "objectID": "index.html#crear-repositorio-en-github",
+    "href": "index.html#crear-repositorio-en-github",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Crear repositorio en GitHub",
+    "text": "Crear repositorio en GitHub"
+  },
+  {
+    "objectID": "index.html#enlazar-repositorio-local-y-remoto",
+    "href": "index.html#enlazar-repositorio-local-y-remoto",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Enlazar repositorio local y remoto",
+    "text": "Enlazar repositorio local y remoto\n URL:  https://github.com/ajpelu/teach_git_ejemplo.git\n\ngit remote add origin <url server>\ngit remote add origin https://github.com/ajpelu/teach_git_ejemplo.git"
+  },
+  {
+    "objectID": "index.html#enviar",
+    "href": "index.html#enviar",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Enviar",
+    "text": "Enviar\n\n\nPara enviar cambios (una vez conectados) a un repositorio remoto\nNos pedirá usuario y contraseña\n\n\ngit push origin master\n\n\n\n\n\n\nWarning\n\n\ngit push origin\ngit push origin master\n¿Qué rama queremos sincronizar?"
+  },
+  {
+    "objectID": "index.html#clonar-un-repositorio",
+    "href": "index.html#clonar-un-repositorio",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Clonar un repositorio",
+    "text": "Clonar un repositorio"
+  },
+  {
+    "objectID": "index.html#clonar-un-repositorio-1",
+    "href": "index.html#clonar-un-repositorio-1",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Clonar un repositorio",
+    "text": "Clonar un repositorio\n\nImportante para reproducibilidad\nColaboración\nRepositorio remoto (GitHub)\n2 formas (diferencias)\n\n\nHTTPSSSH\n\n\n# git clone <url> \ngit clone https://github.com/ajpelu/teach_git_ejemplo.git \n\n\n# git clone username@host:/path/to/repository\ngit clone git@github.com:ajpelu/teach_git_ejemplo.git"
+  },
+  {
+    "objectID": "index.html#actualizar-un-repositorio-local",
+    "href": "index.html#actualizar-un-repositorio-local",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Actualizar un repositorio local",
+    "text": "Actualizar un repositorio local\n\nAllison_horst"
+  },
+  {
+    "objectID": "index.html#actualizar-un-repositorio-local-1",
+    "href": "index.html#actualizar-un-repositorio-local-1",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Actualizar un repositorio local",
+    "text": "Actualizar un repositorio local\n\n¿Existe alguna información nueva en mi repositorio remoto?\n\ngit fetch  \n\n¿Existe alguna información nueva en mi repositorio remoto y quiero que esté en mi repositorio local?\n\ngit pull  \n\n\n\n\n\n\nWarning\n\n\n\nPrestar atención a la rama!!\n\ngit pull origin master"
+  },
+  {
+    "objectID": "index.html#otros-comandos",
+    "href": "index.html#otros-comandos",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Otros comandos",
+    "text": "Otros comandos"
+  },
+  {
+    "objectID": "index.html#pasos",
+    "href": "index.html#pasos",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Pasos",
+    "text": "Pasos\n\n\nInstalar Git en tu ordenador\nCrear un repositorio llamado ecoinf_nombre\n\necoinf_antonioperez\n\nEscribe un documento de texto\nRealiza varios cambios en el documento\nHaz un control de versiones\nCrea un repositorio en GitHub\nConecta ambos repositorios y sincronizalos\n\n\nEntrega: url del repositorio creado"
+  },
+  {
+    "objectID": "index.html#pasos-1",
+    "href": "index.html#pasos-1",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Pasos",
+    "text": "Pasos\n\n\nCrea un documento reproducible con .Rmd y exportalo en el formato que mas te guste (pdf, word, etc.)\nRealiza cambios en el documento:\n\n\nPersonaliza con el encabezado YAML\nIncluye texto\nModifica el código\n\n\nRegistra los cambios en el documento mediante el control de versiones\nUsa el repositorio de la práctica anterior\n\n\nEntrega: url del repositorio creado"
+  },
+  {
+    "objectID": "index.html#pasos-2",
+    "href": "index.html#pasos-2",
+    "title": "Control de Versiones con Git y GitHub",
+    "section": "Pasos",
+    "text": "Pasos\n\n\nCrea un fork del repositorio https://github.com/ajpelu/teach_git_ejemplo\nClona el repositorio en tu equipo para tener una copia local\nEscribe algo en el documento miarchivo.txt (además de tu nombre y tus apellidos, algo original: un poema, una canción, un refrán, un mensaje, … )\nRegistra los cambios y haz un control de versiones\nSincroniza con tu repositorio remoto\nHaz un pull request\n\n\n\n\n\n\n\n\n\nTip\n\n\nSi tienes alguna duda consulta puedes leer este tutorial\n\n\n\n\n\nEntrega: no es necesario, me llegarán los pull requests de cada uno"
+  }
+]
