@@ -5,6 +5,10 @@ format:
   revealjs: 
     theme: custom_theme.scss
     transition: fade
+    highlight-style: ayu-mirage
+    code-line-numbers: false
+execute:
+  echo: false
 ---
 
 ![[phdcomic](http://phdcomics.com/)](images/final_doc.png)
@@ -55,3 +59,204 @@ El **control de versiones** es un sistema que registra los cambios realizados so
 ---
 ![[Devon Wijesinghe](https://wdevon99.medium.com/git-under-the-hood-26b46a47393c)](images/git-distributed.png)
 
+## GitHub 
+
+:::: {.columns}
+::: {.column width="60%"}
+::: small
+- Un website donde alojar repositorios
+- Interfaz para explorar repositorios
+- Permite colaborar de una forma más eficaz:
+  - Compartir repositorio
+  - Ver cambios
+  - Corregir errores 
+  - Discutir y Revisar cambios
+:::
+:::
+::: {.column width="40%"}
+<p align="center"><img src="images/github_logo.png" height="300" width="400"></p>
+
+[https://github.com/](https://github.com/)
+:::
+::::
+
+## Recursos sobre Git
+::: small
+- [Interactive Tutorial Git (CodeSchool)](https://try.github.io/levels/1/challenges/1)
+- [Git - the simple guide (Roger Dudler)](http://rogerdudler.github.io/git-guide/index.es.html)
+- [Git and GitHub (Hadley Wickham)](http://r-pkgs.had.co.nz/git.html)
+- [A brief introduction to git & GitHub (Karl Broman & Samuel G. Younkin)](https://www.biostat.wisc.edu/~kbroman/talks/GitPrimer.pdf)
+- [A basic tutorial to version control using git (Jon Lefcheck)](http://jonlefcheck.net/2013/11/04/a-basic-tutorial-to-version-control-using-git/)
+- [Git/Github guide a minimal tutorial (Karl Broman)](http://kbroman.org/github_tutorial/)
+- [Getting Git Right (Atlassian)](https://www.atlassian.com/git/tutorials/setting-up-a-repository) 
+- [Recopilación de tutoriales (F. Rodríguez-Sánchez)](https://gist.github.com/Pakillo/63c15c700c9c76fe8032)
+:::
+
+## Ciclo de Git
+
+```{r}
+#| fig-align: 'center'
+#| fig-cap: 'Artwork by [Allison_horst](https://github.com/allisonhorst)'
+knitr::include_graphics("images/git-cycle-allison.png")
+```
+
+
+## Ciclo de Git 
+![[T. Meralus](https://meralus.com/git-pull-all/)](images/git-workflow.png)
+
+
+## Instalar Git 
+::: small
+- Instala Git en tu ordenador. Puedes usar la [documentación oficial](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
+:::
+
+#### Configurar Git
+
+::: {.panel-tabset}
+## Código
+```bash
+git config --global user.name 
+git config --global user.email 
+```
+
+## Ejemplo
+```bash
+git config --global "Fulanito Menganito"
+git config --global "micorreo@gmail.com"
+```
+::: 
+
+::: small
+::: {.callout-note}
+Vamos a usar Github, por tanto la dirección de correo que indiques ha de ser la misma con la que te registres en GitHub.
+:::
+
+
+- En cualquier momento podemos ver las opciones de configuración
+```bash
+git config --list
+```
+::: 
+
+## Crear un repositorio nuevo
+
+- Abre la [consola de comandos](https://linube.com/ayuda/articulo/174/abrir-una-consola-de-comandos)
+- Crea un directorio nuevo y ábrelo[^1]
+
+```bash 
+mkdir <nombre_directorio>
+```
+<br>
+
+```bash 
+mkdir datos
+cd datos
+```
+
+[^1]: [Ayuda sobre comandos](http://overapi.com/linux/)
+
+
+## Iniciar un repositorio
+
+- Para __iniciar un repositorio__ utilizamos el comando
+
+
+```bash
+git init nombrerepositorio
+```
+<br>
+
+```bash
+git init mi_primer_repositorio
+```
+
+::: callout-note
+¿Que ha ocurrido en nuestro directorio? 
+::: 
+
+- Inspeccionar el directorio
+
+```bash
+cd mi_primer_repositorio
+ls -a 
+cd .git
+```
+
+## Añadir cambios 
+
+- Crea un archivo de texto dentro del directorio, escribe algo y nómbralo __miarchivo.txt__
+
+- Añade el archivo a la __staging area__
+```bash
+git add <nombre_archivo>
+```
+
+```bash
+git add miarchivo.txt
+```
+- Si quiero añadir todos los archivos 
+
+```bash
+git add . 
+```
+
+## Registrar cambios 
+
+```bash
+git commit -m "Commit message""
+```
+::: callout-important
+El mensaje nos servirá para indicar lo que hemos hecho.
+
+- [Recomendaciones](https://midu.dev/buenas-practicas-escribir-commits-git/) de buenas prácticas para commits 
+- [Algunas convenciones para commits](https://www.conventionalcommits.org/en/v1.0.0/)
+:::
+```bash
+git commit -m "Escribo mis datos personales en archivo"
+```
+<br>
+```
+[master (root-commit) 71fe224] Escribo mis datos personales en archivo
+ 1 file changed, 2 insertions(+)
+ create mode 100644 miarchivo.txt
+```
+
+## 
+![[T. Meralus](https://meralus.com/git-pull-all/)](images/git-workflow.png)
+
+
+## Enviar cambios a Repositorios Remotos  
+- Nuestros cambios están en el __`HEAD`__ (copia local)
+- Queremos enviar los cambios a un __repositorio remoto__
+
+::: callout-caution
+Necesitamos un repositorio remoto: 
+
+- Crear 
+- Clonar 
+:::
+
+
+```bash
+git remote add origin <url server>
+
+git remote add origin https://github.com/ajpelu/ecoinformatica_2014_2015_ajpelu.git
+```
+
+## 
+
+
+
+
+
+
+
+
+
+- Para enviar cambios (una vez conectados) a un repositorio remoto 
+
+```
+git push origin master
+```
+
+- Nos pedirá usuario y contraseña.
